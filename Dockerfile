@@ -1,12 +1,2 @@
 FROM php:8.2-apache
-
-# Copiar archivos al servidor
 COPY . /var/www/html/
-
-# Dar permisos (para logs)
-RUN chmod -R 755 /var/www/html
-RUN touch /var/www/html/logs.txt
-RUN chmod 777 /var/www/html/logs.txt
-
-# Exponer puerto
-EXPOSE 80		

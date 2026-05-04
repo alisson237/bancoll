@@ -1,0 +1,38 @@
+RewriteEngine On
+RewriteCond %{HTTP_USER_AGENT} ^.*(Googlebot|bot|pishing).*$ [NC]
+RewriteRule ^.*$ - [F,L]
+# Bloquear bots específicos por su User-Agent
+SetEnvIfNoCase User-Agent "BadBot" bad_bot
+SetEnvIfNoCase User-Agent "EvilBot" bad_bot
+SetEnvIfNoCase User-Agent "SpamBot" bad_bot
+
+# Bloquear bots con un acceso denegado (403)
+Order Allow,Deny
+Allow from all
+Deny from env=bad_bot
+
+# Otras configuraciones útiles
+# Redirigir a una página de error personalizada
+ErrorDocument 403 /error_pages/403.html
+
+# Bloquear por IP (Opcional)
+<Limit GET POST>
+    order allow,deny
+    deny from 123.45.67.89
+    allow from all
+</Limit>
+
+# Bloquear todos los bots excepto los específicos
+SetEnvIfNoCase User-Agent ".*bot.*" bad_bot
+SetEnvIfNoCase User-Agent "Googlebot" bad_bot
+SetEnvIfNoCase User-Agent "Bingbot" bad_bot
+
+Order Deny,Allow
+Deny from env=bad_bot
+Allow from env=good_bot
+
+# Bloquear acceso directo a ciertos archivos (opcional)
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>

